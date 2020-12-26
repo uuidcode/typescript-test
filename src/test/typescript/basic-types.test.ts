@@ -1,4 +1,5 @@
 import Person from './main/Person'
+import Project from './main/Project'
 
 describe('Basic Types', () => {
     test('Enum#number', () => {
@@ -19,5 +20,19 @@ describe('interface', () => {
     test('test', () => {
         let person : Person = {name: "Jane"}
         expect(person.name).toBe("Jane");
+
+    })
+})
+
+describe('Project', () => {
+    test('test', () => {
+        let project = Project.of()
+            .setCount(10)
+            .setName("test")
+            .setSize(30)
+
+        console.log('>>> project', project);
+
+        expect(project.getName()).toBe("test")
     })
 })
